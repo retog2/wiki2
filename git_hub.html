@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Git y Git-Hub</title>
+		<link rel="stylesheet" href="css/dise.css">
+	</head>
+	<body>
+	<div id="header">
+		<nav>
+			<ul>
+		        <li><a href="principal.html">Inicio</a></li>
+				<li><a href="proxmox.html">ProxMox</a></li>
+				<li><a href="ubuntu_server.html">Ubuntu Server</a></li>
+				<li><a href="apache.html">Apache</a></li>
+				<li><a href="git_hub.html">Git - Git Hub</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+		    </ul>
+        </nav>
+	</div>
+	 	<div id="pagina">
+			<article>
+		    	<h1> Git y Git-Hub</h1>
+				<h2><a name="que_es_git">¿Qué es Git?</a></h2>
+					<p>Git es un sistema de control de versiones diseñado por Linus Torvalds, pensando en la eficiencia y la confiabilidad del mantenimiento de versiones de aplicaciones cuando éstas tienen un gran número de archivos de código fuente.</p>
+					
+				<h2><a name="que_es_control">¿Qué es control de versiones?</a></h2>
+					<p>El control de versiones es la gestión de los diversos cambios que se realizan sobre algún archivo, en este caso, código.</p>
+
+				<h2><a name="que_es_gith">¿Qué es GitHub?</a></h2>
+					<p>Es un sistema de control de versiones basado en Git, tiene una comunidad muy activa y aloja algunos proyectos muy interesantes como el Bootstrap de Twitter, el HTML5 Boilerplate, jQuery, entre muchos otros.</p>
+
+				<h2>GitHub en Ubuntu</h2>
+					<p>Debido a que no tenemos un cliente gráfico como en Windows o en Mac, deberemos proceder desde la consola.</p>
+				
+				<h3>Instalación y configuración</h3>
+					<h4><a name="instalacion">Instalación</a></h4>
+						<p>Lo primero que tenemos que hacer es instalar Git, para eso abrimos la consola y tecleamos:</p>
+							<i>sudo apt-get install git-hub</i>
+					<h4><a name="configuracion">Configuración</a></h4>
+						<p>Después configuraremos nuestros datos (usaré los míos):</p>
+							<i>git config --global user.name "carlos"</i>
+							<i>git config --global user.email "me@carlosandresviteri.com"</i>
+							<p><img src="imagenes/git/git1.png"></p>
+
+					<h4><a name="repositorios">Creación de un repositorio</h4>
+						<p>Para crear un repositorio deberemos dirigirnos a New Repository , completar los datos que nos pide y darle clic a Create Repository:</p>
+					
+					<h4><a name="subir">Subida de archivos</a></h4>
+						<p>Para subir archivos desde nuestro ordenador primero iniciamos el git. Ejecutamos el siguiente comando:</p>
+							<i>git init</i>
+			
+						<p>Para añadir archivos, si queremos por ejemplo añadir todos los archivos de la carpeta, tecleamos el siguiente comando:</p>
+							<i>git add </i>
+			
+						<p>Pero si queremos añadir un archivo específico sería:</p>
+							<i>git add nombre-del-archivo.extensión</i>
+
+						<p>TODOS los cambios que hagamos requieren un comentario, para ello tecleamos:</p>
+							<i>git commit -m '1consolidacion'</i>
+
+						<p>Para eliminar los cambios realizados que aún no se hayan hecho commit tecleamos:</p>
+							<i>git reset --hard HEAD</i>
+
+						<p>Para conectarnos al repositorio tecleamos -nótese mi nombre de usuario y el nombre del repositorio-:</p>
+							<i>git remote add origin git@github.com: niclick/intro-github-en-ubuntu.git</i>
+
+						<p>Si nos sale este error:</p>
+							<i>fatal: remote origin already exists</i>
+
+						<p>La solución es teclear, y repetir el paso anterior:</p>
+							<i>git remote rm origin</i>
+
+						<p>Y lo subimos:</p>
+							<i>git push -u origin master</i>
+
+						<p>Para registrar las consolidaciones tecleamos:</p>
+							<i>git log</i>
+
+					<h4><a name="mostrar">Mostrar estado actual</a></h4>
+						<p>Para mostrar el estado actual de la rama, como los cambios que hay sin commitear tecleamos:</P>
+							<i>git status</i>
+
+					<h4><a name="actualizar">Actualizar repositorios</a></h4>
+						<P>Para actualizar los repositorios al commit más nuevo tecleamos:</P>
+							<i>git pull</i>
+
+					<h4><a name="eliminar">Eliminar un archivo</a></h4>
+						<p>Para eliminar un archivo debemos teclear:</p>
+							<i>git rm nombre-del-archivo.extensión</i>
+						<P>Y para que el cambio se refleje en GitHub, deberemos hacer el mismo proceso que el de subida.  </p>
+			
+					<h4><a name="clonar">Clonar un Repositorio</a></h4>
+						<p>Para clonar el repositorio podemos hacerlo mediante la consola. Le damos clic en Git Read-Only y copiamos el contenido:</p>
+						<img src="imagenes/git/git2.png">
+
+						<p>Luego vamos a la consola y tecleamos git clone más lo que copiamos anteriormente:</p>
+							<i>git clone git://github.com/niclick/intro-github-en-ubuntu.git</i>
+						<p>Y tendremos listo nuestro repositorio clonado de forma local.</p>
+			</article>
+		    <nav>
+				<ul class="enlace">
+					<li><img src="imagenes/flecha.jpg"> <a href="#que_es">¿Qué es?</a></li>
+					<li><img src="imagenes/flecha.jpg"> <a href="#para_que">¿Para qué se utiliza?</a></li>
+					<li><img src="imagenes/flecha.jpg"> <a href="#instalacion">Instalación</a></li>
+					<li><img src="imagenes/flecha.jpg"> <a href="#configuracion">Configuración</a></li>
+					<li><img src="imagenes/flecha.jpg"> <a href="#repositorios">Repositorios</a></li>
+					<li><img src="imagenes/flecha.jpg"> <a href="#subir">Subida de archivos</a></li>
+					<li><img src="imagenes/flecha.jpg"> <a href="#actualizar">Actualizar repositorios</a></li>
+					<li><img src="imagenes/flecha.jpg"> <a href="#mostrar">Mostrar estado</a></li>
+					<li><img src="imagenes/flecha.jpg"> <a href="#actualizar">Actualizar repositorios</a></li>
+					<li><img src="imagenes/flecha.jpg"> <a href="#eliminar">Eliminar archivo</a></li>
+					<li><img src="imagenes/flecha.jpg"> <a href="#clonar">Clonar repositorio</a></li>
+				</ul>
+				
+		    </nav>
+	 	</div>
+	 	<footer><b>&copy; Página creada por:</b> Kevin Diaz-Medino, Veronica Cuadrado, Eder Grijalba y Maitane Navarro.</footer>
+	</body>
+</html>

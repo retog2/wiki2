@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Apache</title>
+		<link rel="stylesheet" href="css/dise.css">
+	</head>
+	<body>
+	<div id="header">
+		<nav>
+			<ul>
+		        <li><a href="principal.html">Inicio</a></li>
+				<li><a href="proxmox.html">ProxMox</a></li>
+				<li><a href="ubuntu_server.html">Ubuntu Server</a></li>
+				<li><a href="apache.html">Apache</a></li>
+				<li><a href="git_hub.html">Git - Git Hub</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+		    </ul>
+        </nav>
+	</div>
+	 	<div id="pagina">
+			<article>
+				<h1>Apache en Ubuntu</h1>
+			<h2><a name="que_es">¿Qué es?</a></h2>
+				<p>El servidor HTTP Apache es un servidor web de código abierto, para plataformas Unix (BSD, GNU/Linux, etc.), Microsoft Windows, Macintosh y otras, que implementa el protocolo HTTP.</p>
+			<h2><a name="para_que">¿Para que se utiliza?</a></h2>
+				<p>Apache es usado principalmente para enviar páginas web estáticas y dinámicas en la World Wide Web. Muchas aplicaciones web están diseñadas asumiendo como ambiente de implantación a Apache, o que utilizarán características propias de este servidor web.</p>
+
+			<h3>Instalación y configuración</h3>
+				<h4><a name="instalacion">Instalación</a></h4>
+					<p>Instalar Apache en Ubuntu es un proceso sencillo que podemos conseguir usando el administrador de paquetes "apt". </p>
+					<p>En nuestro caso, vamos hacer una instalacion por defecto, ya que no necesitaremos más.</p>
+					<p>Utilizaremos los siguientes comandos para la instalación.</p>
+					<b>Primeros pasos: </b>
+						<ol>
+							<li>Ponernos como super usuarios utiliando el siguiente comando: <b>sudo su</b>, nos pedirá una clave, en nuestro caso será la del usuario <b>Admin</b>, "admin".</li>
+							<li>Actualizar los repositorios de Ubuntu con el siguiente comando: <b>apt-get update</b>. </li>
+							<li>Actualizar el sistema y las psoibles actualizaciones de aplicaciones que haya con el siguiente comando: <b>apt-get upgrade</b>.</li>
+						</ol>
+
+					<b>Segundo paso:</b>
+						<p>Para instalar el Apache tenemos que ejecutar el siguiente comando en la consola:</p>
+						<i>apt-get install apache2</i>
+						<br><br>
+
+					<b>Tercer paso: </b>
+						<p>Para comprobar que se ha instalado correctamente el apache.</p>
+						En el navegador tendremos que poner la siguiente dirección: <b>http://127.0.0.1 </b>, la IP de nuestro equipo que en nuestro caso sería la siguiente: <b>10.9.53.105</b>
+						o como ultima opcion la siguiente: <b>http://localhost</b>.
+						<p> Nos tendría que salir la siguiente imagen si esta correctamente instalado.</p>
+						<img src="Imagenes/apache/pagina-servidor-apache-por-defecto-288x400.png">
+
+				<h4><a name="configuracion">Configuración</a></h4>
+				<p>Realizaremos varias modificaciones en el archivo de configuración general de Apache para tratar de conseguir mejor rendimiento.</p>
+				Para ello, ejecutaremos el siguiente comando: <i><b>sudo nano /etc/apache2/apache2.conf</b></i>
+
+				<p>Ajustaremos los valores de las siguientes variables como se indica a continuación:</p>
+
+				<ul>
+					<li>Timeout 150</li>
+					<li>MaxKeepAliveRequests 150</li>
+					<li>KeepAliveTimeout 3</li>
+				</ul>
+				<h4><a name="comandos">Comandos para reiniciar, parar e iniciar Apache.</a></h4>
+
+					<p>Para reiniciar/parar/iniciar Apache podemos emplear los comandos:</p>
+				<ul>
+					<li>service apache2 restart</li>
+					<li>service apache2 stop</li>
+					<li>service apache2 start</li>
+				</ul>
+					<p>También podemos emplear los comandos siguientes que son más informativos:</p>
+				<ul>
+					<li>/etc/init.d/apache2 restart</li>
+					<li>/etc/init.d/apache2 stop</li>
+					<li>/etc/init.d/apache2 start</li>
+				</ul>
+					<p>Si lo que queremos es reiniciar únicamente la configuración de Apache, es suficiente ejecutar uno de los siguientes comandos:</p>
+				<ul>
+					<li>service apache2 reload</li>
+					<li>/etc/init.d/apache2 reload</li>
+				</ul>
+			</article>
+		    <nav>
+				<ul class="enlace">
+					<li><img src="imagenes/flecha.jpg"> <a href="#que_es">¿Qué es?</a></li>
+					<li><img src="imagenes/flecha.jpg"> <a href="#para_que">¿Para qué se utiliza?</a></li>
+					<li><img src="imagenes/flecha.jpg"> <a href="#instalacion">Instalación</a></li>
+					<li><img src="imagenes/flecha.jpg"> <a href="#configuracion">Configuración</a></li>
+					<li><img src="imagenes/flecha.jpg"> <a href="#comandos">Comandos</a></li>
+				</ul>
+				
+		    </nav>
+	 	</div>
+	 	<footer><b>&copy; Página creada por:</b> Kevin Diaz-Medino, Veronica Cuadrado, Eder Grijalba y Maitane Navarro.</footer>
+	</body>
+</html>

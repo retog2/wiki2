@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<title>Ubuntu Server</title>
+		<link rel="stylesheet" href="css/dise.css">
+	</head>
+	<body>
+	<div id="header">
+		<nav>
+			<ul>
+		        <li><a href="principal.html">Inicio</a></li>
+				<li><a href="proxmox.html">ProxMox</a></li>
+				<li><a href="ubuntu_server.html">Ubuntu Server</a></li>
+				<li><a href="apache.html">Apache</a></li>
+				<li><a href="git_hub.html">Git - Git Hub</a></li>
+				<li><a href="contacto.html">Contacto</a></li>
+		    </ul>
+        </nav>
+	</div>
+	 	<div id="pagina">
+			<article>
+				<h1>Ubuntu Server</h1>
+		    	<h2><a name="que_es">¿Qué es?</a></h2>
+		    		<p>Ubuntu Server es una variante de Ubuntu que sale con cada versión y está dedicada especialmente para su uso en servidores. El uso de Ubuntu como servidor se ha extendido mucho en los últimos años, sobretodo para el uso de servidores web, de un modo tanto particular como profesional.</p>
+
+		    	<h2><a name="para_que">¿Para qué se utiliza?</a></h2>
+		    		<p>En nuestro caso, nos sirve para montar un servidor web y en el instalar diferentes servicios.</p>
+
+				<h2><a name="descarga">Descarga plantilla e instalación en el contenedor</a></h2>
+					<p>Aqui os enseñaremos a como descargar una plantilla y a instalarla para hacer un contenedor en proxmox.</p>
+					<p><b><a name="paso1">Primer paso:</a> </b></p>
+						<p>Ir a nuestro dominio y pinchar en <i>local</i>, al hacerlo os aparecera la siguiente ventana:</p>
+							<img src="imagenes/ct/cap1.png" width="850px">	
+
+					<p><b><a name="paso2">Segundo paso:</a> </b></p>
+					<p>Pinchamos en plantillas y seleccionamos la que queramos escoger que en nuestro caso va a ser la versión <i>Ubuntu 17.04.</i> </p>
+					<img src="imagenes/ct/cap2.png" width="850px">	
+					
+					<p><b><a name="paso3">Tercer paso:</a> </b></p>
+					<p>Una vez esté descargada procedemos a crear un contenedor, para ir a la creación de el hay que hacer click aquí.</p>
+					<img src="imagenes/ct/cap3.png" width="850px">	
+
+				<h3><a name="creacion">Creación e instalación en el contenedor</a></h3>
+					<p><b><a name="paso4">Cuarto Paso:</a></b></p>
+					<p> Una vez esté descargada la plantilla, procederemos a crear nuestro contenedor. Para ello, hay que pinchar en la esquina superior sobre el boton <i>creat CT</i>.</p>
+					<img src="imagenes/ct/cap4.png" width="850px">
+
+					<p><b><a name="paso5">Quinto paso:</a></b></p>
+					<p>Se te abrira una pestañita como esta, rellenar por lo menos la parte de host y la contraseña.</p>
+					<img src="imagenes/ct/cap5.png" width="850px">	
+
+					<p><b><a name="paso6">Sexto paso:</a></b></p>
+					<p>Cuando esté rellenada hacer click en plantilla o siguiente, seleccionamos la plantilla que hayamos descargado.</p>
+					<img src="imagenes/ct/cap6.png" width="850px">
+
+					<p><b><a name="paso7">Septimo paso:</a></b></p>
+					<p>Cuando esté seleccionada la plantilla hacer click en root disc, damos el tamaño de disco y continuamos haciendo click en CPU o siguiente.</p>
+					<img src="imagenes/ct/cap7.png" width="850px">
+
+					<p><b><a name="paso8">Octavo paso:</a></b></p>
+					<p>Elegir cuantos nucleos queremos coger del procesador y hacemos click en Memoria o siguiente.</p>
+					<img src="imagenes/ct/cap8.png" width="850px">
+
+					<p><b><a name="paso9">Noveno paso:</a></a></b></p>
+					<p>Elegimos cuanta memoria RAM queremos que coja y hacemos click en Redes o siguiente.</p>
+					<img src="imagenes/ct/cap9.png" width="850px">
+
+					<p><b><a name="paso10">Décimo paso:</a></b></p>
+					<p>Aquí rellenamos la parte de IPV4 y puerta de enlace, una vez rellenado hacemos click en DNS o siguiente.</p>
+					<img src="imagenes/ct/cap10.png" width="850px">
+
+					<p><b><a name="paso11">Undécimo paso:</a></b></p>
+					<p>Metemos nuestro DNS y hacemos click en confirmación o siguiente.</p>
+					<img src="imagenes/ct/cap11.png" width="850px">
+
+					<p><b><a name="paso12">Duodécimo paso:</a></b></p>
+					<p>Revisar si todo está correcto y hacer click en finalizado.</p>
+					<img src="imagenes/ct/cap12.png" width="850px">
+
+					<p><b><a name="paso13">Decimotercero paso:</a></b></p>
+					<p>Esperar hasta que deje de procesar todo(tarda poco), cuando acabe cerrar esta ventana.</p>
+					<img src="imagenes/ct/cap13.png" width="850px">
+
+					<p><b><a name="paso14">Decimocuarto paso:</a></b></p>
+					<p>Cuando ya haya acabado hacemos click derecho en nuestro contenedor y le damos a consola.</p>
+					<img src="imagenes/ct/cap14.png" width="850px">
+
+					<p>Una vez se haya abierto la cuenta será root(viene predefinida así) y la contraseña la que hayamos puesto en pasos anteriores.</p>
+			
+
+			</article>
+		    <nav>
+				<ul class="enlace">
+					<li><img src="imagenes/flecha.jpg"> <a href="#que_es">¿Qué es?</a></li>
+					<li><img src="imagenes/flecha.jpg"> <a href="#para_que">¿Para qué se utiliza?</a></li>
+					<li><img src="imagenes/flecha.jpg"> <a href="#descarga">Descarga e instalación</a>
+						<ul>
+							<li><img src="imagenes/flecha.jpg"> <a href="#paso1">Primer paso</a></li>
+							<li><img src="imagenes/flecha.jpg"> <a href="#paso2">Segundo paso</a></li>
+							<li><img src="imagenes/flecha.jpg"> <a href="#paso3">Tercer paso</a></li>
+							<li><img src="imagenes/flecha.jpg"> <a href="#paso4">Cuarto paso</a></li>
+							<li><img src="imagenes/flecha.jpg"> <a href="#paso5">Quinto paso</a></li>
+							<li><img src="imagenes/flecha.jpg"> <a href="#paso6">Sexto paso</a></li>
+							<li><img src="imagenes/flecha.jpg"> <a href="#paso7">Septimo paso</a></li>
+							<li><img src="imagenes/flecha.jpg"> <a href="#paso8">Octavo paso</a></li>
+							<li><img src="imagenes/flecha.jpg"> <a href="#paso9">Noveno paso</a></li>
+							<li><img src="imagenes/flecha.jpg"> <a href="#paso10">Décimo paso</a></li>
+							<li><img src="imagenes/flecha.jpg"> <a href="#paso11">Undécimo paso</a></li>
+							<li><img src="imagenes/flecha.jpg"> <a href="#paso12">Duodécimo paso</a></li>
+							<li><img src="imagenes/flecha.jpg"> <a href="#paso13">Decimotercero paso</a></li>
+							<li><img src="imagenes/flecha.jpg"> <a href="#paso14">Decimocuarto paso</a></li>
+						</ul>
+					</li>
+				</ul>
+				
+		    </nav>
+	 	</div>
+	 	<footer><b>&copy; Página creada por:</b> Kevin Diaz-Medino, Veronica Cuadrado, Eder Grijalba y Maitane Navarro.</footer>
+	</body>
+</html>
